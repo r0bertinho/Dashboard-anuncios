@@ -1,0 +1,1 @@
+# As an example: Book = {1 : barcode, 2 : quantity, 3 : taken}
