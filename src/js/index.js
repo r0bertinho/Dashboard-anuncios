@@ -1,0 +1,1 @@
+var indoc=document.getElementsByClassName("root");
