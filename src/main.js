@@ -13,7 +13,9 @@ function search() {
   // implement search functionality
 }
 function openfiltertab() {
-  // implement filter tab functionality
+  // Toggle the side menu
+  const sideMenu = document.querySelector('.side-menu');
+  sideMenu.style.display = sideMenu.style.display === 'block' ? 'none' : 'block';
 }
 function passslide(direction) {
   // implement pass slide functionality
