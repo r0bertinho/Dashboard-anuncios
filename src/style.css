@@ -8,6 +8,13 @@ html, body {
   padding: 16px;
   display: flex;
 }
+.header #logo {
+  width: 30px;
+  padding: 0px;
+  padding-right: 16px;
+  margin: 0px;
+  border: 0px;
+}
 .header button {
   border: none;
   color: black;
