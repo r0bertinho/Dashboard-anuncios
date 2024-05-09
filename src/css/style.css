@@ -4,7 +4,7 @@ html, body {
   height: 100%;
 }
 .header {
-  background-color: #210124;
+  background-color: #3D0814;
   padding: 16px;
   display: flex;
 }
@@ -16,8 +16,8 @@ html, body {
 .header button {
   border: none;
   color: black;
-  background-color: #C4F5FC;
-  outline-color: #C4F5FC;
+  background-color: #FCDE9C;
+  outline-color: #FCDE9C;
   min-width: 80px;
   min-height: 24px;
   border-top-right-radius: 16px;
@@ -26,8 +26,8 @@ html, body {
 }
 .header button:hover {
   color: black;
-  background-color: #BDEDE0;
-  outline-color: #BDEDE0;
+  background-color: #FFFCD9;
+  outline-color: #FFFCD9;
 }
 .header input {
   border: none;
@@ -56,7 +56,7 @@ html, body {
   justify-content: center;
   align-items: center;
   padding: 16px;
-  background-color: #9e75f2;
+  background-color: #FFFCD9;
 }
 .slideshow #slideimg {
   object-fit: cover;
@@ -94,13 +94,45 @@ hr {
   height: 100vh;
   margin-top: 0px;
   margin-bottom: 0px;
+  align-items: center;
+  justify-content: center;
+  vertical-align: top;
   display: flex;
   flex-wrap: wrap;
   padding: 16px;
   background: 
-    linear-gradient(to right, #3c00ff, transparent), 
+    linear-gradient(to right, #3D0814cc, #3D0814cc), 
     url("../img/textura.jpg");
   filter: contrast(100%) brightness(100%);
+}
+.product {
+  width: fit-content;
+  height: fit-content;
+  padding: 20px;
+  margin: 1%;
+  background-color: #FFA552;
+  outline-style: dashed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 16px;
+}
+.product:hover {
+  outline-style: solid;
+}
+.product img {
+  width: 100%;
+  height: 100%;
+  align-self: center;
+}
+.product #nail {
+  width: 12px;
+  height: 12px;
+  margin-top: -16px;
+  background-color: #808080;
+  outline-style: solid;
+  align-self: center;
+  border-radius: 100%;
 }
 .side-menu {
   outline-style: solid;
@@ -110,7 +142,7 @@ hr {
   width: 25%;
   height: 100vh;
   background:
-    linear-gradient(to right, #9e75f2, #6b43bd);
+    linear-gradient(to right, #FFA552, #BA5624);
   filter: contrast(110%) brightness(80%);
   padding: 16px;
   display: none;
