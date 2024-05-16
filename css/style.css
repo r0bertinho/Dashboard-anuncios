@@ -4,7 +4,7 @@ html, body {
   height: 100%;
 }
 .header {
-  background-color: #3D0814;
+  background-color: whitesmoke;
   padding: 16px;
   display: flex;
 }
@@ -16,18 +16,13 @@ html, body {
 .header button {
   border: none;
   color: black;
-  background-color: #FCDE9C;
-  outline-color: #FCDE9C;
+  background-color: #921313;
+  outline-color: #921313;
   min-width: 80px;
   min-height: 24px;
   border-top-right-radius: 16px;
   border-bottom-right-radius: 16px;
   margin-left: -4px;
-}
-.header button:hover {
-  color: black;
-  background-color: #FFFCD9;
-  outline-color: #FFFCD9;
 }
 .header input {
   border: none;
@@ -41,7 +36,7 @@ html, body {
   margin-left: auto;
 }
 .icons #filter-btn {
-  color: white;
+  color: #921313;
   background: none;
   border: none;
   margin-left: 0px;
@@ -49,14 +44,13 @@ html, body {
 }
 .icons #filter-btn:hover {
   font-style: italic;
-  color: #BDEDE0;
 }
 .slideshow {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 16px;
-  background-color: #FFFCD9;
+  background-color: #921313;
 }
 .slideshow #slideimg {
   object-fit: cover;
@@ -64,9 +58,6 @@ html, body {
   border-radius: 10px;
   width: 75%;
   height: 400px;
-}
-.slideshow #slideimg:hover {
-  outline-style: solid;
 }
 .slideshow button {
   background: none;
@@ -81,13 +72,6 @@ html, body {
 .slideshow #right-btn {
   margin-left: -16px;
 }
-hr {
-  background-color: #210124;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  border: solid;
-  border-top: 1px solid #000000;
-}
 .prodtable {
   min-height: 800px;
   height: auto !important;
@@ -100,50 +84,32 @@ hr {
   display: flex;
   flex-wrap: wrap;
   padding: 16px;
-  background: 
-    linear-gradient(to right, #3D0814cc, #3D0814cc), 
-    url("../img/textura.jpg");
-  filter: contrast(100%) brightness(100%);
+  background-color: whitesmoke;
 }
 .product {
   width: fit-content;
   height: fit-content;
   padding: 20px;
   margin: 1%;
-  background-color: #FFA552;
+  background-color: #921313;
   outline-style: dashed;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   border-radius: 16px;
 }
-.product:hover {
-  outline-style: solid;
-}
 .product img {
   width: 100%;
   height: 100%;
   align-self: center;
 }
-.product #nail {
-  width: 12px;
-  height: 12px;
-  margin-top: -16px;
-  background-color: #808080;
-  outline-style: solid;
-  align-self: center;
-  border-radius: 100%;
-}
 .side-menu {
-  outline-style: solid;
   position: fixed;
   top: 0;
   left: 0;
   width: 25%;
   height: 100vh;
-  background:
-    linear-gradient(to right, #FFA552, #BA5624);
-  filter: contrast(110%) brightness(80%);
+  background-color: #921313;
   padding: 16px;
   display: none;
 }
