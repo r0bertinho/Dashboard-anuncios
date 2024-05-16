@@ -4,7 +4,7 @@ html, body {
   height: 100%;
 }
 .header {
-  background-color: whitesmoke;
+  background-color: #a0a0a0;
   padding: 16px;
   display: flex;
 }
@@ -54,7 +54,6 @@ html, body {
 }
 .slideshow #slideimg {
   object-fit: cover;
-  outline-style: dotted;
   border-radius: 10px;
   width: 75%;
   height: 400px;
@@ -84,7 +83,7 @@ html, body {
   display: flex;
   flex-wrap: wrap;
   padding: 16px;
-  background-color: whitesmoke;
+  background-color: #a0a0a0;
 }
 .product {
   width: fit-content;
