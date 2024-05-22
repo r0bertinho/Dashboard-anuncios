@@ -45,13 +45,6 @@ html, body {
 .icons #filter-btn:hover {
   font-style: italic;
 }
-.icons #perfil-btn {
-  margin: 0px;
-  padding: 0px;
-  border: 0px;
-  background: none;
-  outline: none;
-}
 .icons #perfil-image {
   border-radius: 50%;
   object-fit: cover;
@@ -60,7 +53,7 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 16px;
+  padding: 32px;
   background-color: #921313;
 }
 .slideshow #slideimg {
