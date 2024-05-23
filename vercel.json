@@ -1,5 +1,7 @@
 {
   "version": 2,
+  "packageManager": "npm@7.5.1",
+  "framework":"angular",
   "builds": [
     {
       "src": "package.json",

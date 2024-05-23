@@ -28,6 +28,17 @@ class SubWindow {
   openfiltertab() {
     const sideMenu = document.querySelector('.side-menu');
     sideMenu.style.display = sideMenu.style.display === 'block'? 'none' : 'block';
+
+    if (sideMenu.style.display === 'block') {
+      sideMenu.style.width = '0%';
+      setTimeout(() => {
+        sideMenu.style.transition = 'width 0.5s';
+        sideMenu.style.width = '25%';
+      }, 10);
+    } else {
+      sideMenu.style.transition = 'width 0.5s';
+      sideMenu.style.width = '0%';
+    }
   }
 
   openPerfilSubpage() {
