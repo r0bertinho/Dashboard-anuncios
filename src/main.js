@@ -1,4 +1,4 @@
-import 'main.ts';
+import { operation, subWindow } from './js/lib';
 const searchInput = document.getElementById('search-input');
 const searchBtn = document.getElementById('search-btn');
 const filterBtn = document.getElementById('filter-btn');
