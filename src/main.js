@@ -1,4 +1,4 @@
-class operation {
+class Operation {
   constructor() {
     // implementation
   }
@@ -20,7 +20,7 @@ class operation {
   }
 }
 
-class subWindow {
+class SubWindow {
   constructor() {
     // implementation
   }
@@ -36,6 +36,9 @@ class subWindow {
   }
 }
 
+const operationInstance = new Operation();
+const subWindowInstance = new SubWindow();
+
 const searchInput = document.getElementById('search-input');
 const searchBtn = document.getElementById('search-btn');
 const filterBtn = document.getElementById('filter-btn');
@@ -44,8 +47,9 @@ const prodList = document.getElementsByClassName("prodtable");
 const leftBtn = document.getElementById('left-btn');
 const rightBtn = document.getElementById('right-btn');
 const perfilBtn = document.getElementById('perfil-image');
-searchBtn.addEventListener('click', () => operation.search());
-rightBtn.addEventListener('click', () => operation.passslide('right'));
-leftBtn.addEventListener('click', () => operation.passslide('left'));
-filterBtn.addEventListener('click', () => subWindow.openfiltertab());
-perfilBtn.addEventListener('click', () => subWindow.openPerfilSubpage());
+
+searchBtn.addEventListener('click', () => operationInstance.search());
+rightBtn.addEventListener('click', () => operationInstance.passslide('right'));
+leftBtn.addEventListener('click', () => operationInstance.passslide('left'));
+filterBtn.addEventListener('click', () => subWindowInstance.openfiltertab());
+perfilBtn.addEventListener('click', () => subWindowInstance.openPerfilSubpage());
