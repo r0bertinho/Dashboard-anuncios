@@ -50,8 +50,8 @@ let prodList: HTMLCollectionOf<HTMLElement> = document.getElementsByClassName("p
 let leftBtn: HTMLElement | null = document.getElementById('left-btn');
 let rightBtn: HTMLElement | null = document.getElementById('right-btn');
 let perfilBtn: HTMLElement | null = document.getElementById('perfil-image');
-searchBtn?.addEventListener('click', search);
-leftBtn?.addEventListener('click', () => passslide('left'));
-filterBtn?.addEventListener('click', openfiltertab);
-perfilBtn?.addEventListener('click', () => openPerfilSubpage());
-rightBtn?.addEventListener('click', () => passslide('right'));
+searchBtn?.addEventListener('click', () => operation.search());
+rightBtn?.addEventListener('click', () => operation.passslide('right'));
+leftBtn?.addEventListener('click', () => operation.passslide('left'));
+filterBtn?.addEventListener('click', () => subWindow.openfiltertab());
+perfilBtn?.addEventListener('click', () => subWindow.openPerfilSubpage());
