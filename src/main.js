@@ -35,6 +35,12 @@ class SubWindow {
         sideMenu.style.transition = 'width 0.5s';
         sideMenu.style.width = '25%';
       }, 10);
+    } else if (sideMenu.style.display === 'none') {
+      sideMenu.style.transition = 'width 0.5s';
+      sideMenu.style.width = '0%';
+      setTimeout(() => {
+        sideMenu.style.display = 'none';
+        }, 500);
     } else {
       sideMenu.style.transition = 'width 0.5s';
       sideMenu.style.width = '0%';
