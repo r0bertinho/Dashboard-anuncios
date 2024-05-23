@@ -1,4 +1,41 @@
-import { operation, subWindow } from './js/lib';
+class operation {
+  constructor() {
+    // implementation
+  }
+
+  search(query) {
+    // implementation
+  }
+
+  filterElements(filterTag) {
+    // implementation
+  }
+
+  passslide(direction) {
+    // implementation
+  }
+
+  createByTemplate(tmplt) {
+    // implementation
+  }
+}
+
+class subWindow {
+  constructor() {
+    // implementation
+  }
+
+  openfiltertab() {
+    const sideMenu = document.querySelector('.side-menu');
+    sideMenu.style.display = sideMenu.style.display === 'block'? 'none' : 'block';
+  }
+
+  openPerfilSubpage() {
+    const subpage = document.querySelector('.subpage-perfil');
+    subpage.style.display = 'block';
+  }
+}
+
 const searchInput = document.getElementById('search-input');
 const searchBtn = document.getElementById('search-btn');
 const filterBtn = document.getElementById('filter-btn');
