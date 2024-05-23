@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { bootstrapApplication } from '@angular/platform-browser';
 import 'zone.js';
 
-let root = document.getElementsByClassName('root');
+let root:HTMLElement = document.getElementsByClassName('root');
 
 class operation {
   constructor() {
