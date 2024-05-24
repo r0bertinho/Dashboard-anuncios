@@ -62,7 +62,7 @@ const base = document.getElementById("prod-template");
 const prodList = document.getElementsByClassName("prodtable");
 const leftBtn = document.getElementById('left-btn');
 const rightBtn = document.getElementById('right-btn');
-const perfilBtn = document.getElementById('perfil-image');
+const perfilBtn = document.getElementById('perfil-btn');
 
 // Event listeners
 const operationInstance = new Operation();
