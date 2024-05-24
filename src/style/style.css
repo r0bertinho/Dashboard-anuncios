@@ -45,6 +45,17 @@ html, body {
 .icons #filter-btn:hover {
   font-style: italic;
 }
+.icons #perfil-btn {
+  padding: 0px;
+  margin: 0px;
+  border-radius: 50%;
+  outline: solid;
+  outline-color: #921313;
+  outline-style: dotted;
+}
+.icons #perfil-btn:hover {
+  outline-style: dashed;
+}
 .icons #perfil-image {
   border-radius: 50%;
   object-fit: cover;
