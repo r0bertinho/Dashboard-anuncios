@@ -1,5 +1,23 @@
 class Operation {
-  // implementation
+  constructor() {
+    // implementation
+  }
+
+  search(query) {
+    // implementation
+  }
+
+  filterElements(filterTag) {
+    // implementation
+  }
+
+  passslide(direction) {
+    // implementation
+  }
+
+  createByTemplate(tmplt) {
+    // implementation
+  }
 }
 
 class SubWindow {
@@ -7,30 +25,27 @@ class SubWindow {
     // implementation
   }
 
-  slideMenu(sideMenu, direction) {
-    const width = direction === 'open' ? '25%' : '0%';
-    const transitionTime = 'width 0.5s';
-
-    if (sideMenu.style.display === 'block') {
-      sideMenu.style.transition = transitionTime;
-      sideMenu.style.width = width;
-    } else {
-      sideMenu.style.display = 'block';
-      sideMenu.style.transition = transitionTime;
-      sideMenu.style.width = width;
-    }
-  }
-
-  closeMenu(sideMenu) {
-    const timeout = 500;
-    const transitionTime = 'width 0.5s';
-
-    sideMenu.style.transition = transitionTime;
-    sideMenu.style.width = '0%';
-
-    setTimeout(() => {
-      sideMenu.style.display = 'none';
-    }, timeout);
+  openfiltertab() {
+    const sideMenus = document.querySelectorAll('.side-menu');
+  
+    sideMenus.forEach(sideMenu => {
+      sideMenu.classList.toggle('open');
+  
+      if (sideMenu.classList.contains('open')) {
+        sideMenu.style.width = '0%';
+        setTimeout(() => {
+          sideMenu.style.width = '25%';
+        }, 10);
+      } else {
+        sideMenu.style.width = '25%';
+        setTimeout(() => {
+          sideMenu.style.width = '0%';
+        }, 10);
+        setTimeout(() => {
+          sideMenu.style.display = 'none';
+        }, 500);
+      }
+    });
   }
 
   openPerfilSubpage() {
@@ -50,13 +65,9 @@ const prodList = document.getElementsByClassName("prodtable");
 const leftBtn = document.getElementById('left-btn');
 const rightBtn = document.getElementById('right-btn');
 const perfilBtn = document.getElementById('perfil-image');
-const sideMenu = document.querySelector('.side-menu');
 
 searchBtn.addEventListener('click', () => operationInstance.search());
 rightBtn.addEventListener('click', () => operationInstance.passslide('right'));
 leftBtn.addEventListener('click', () => operationInstance.passslide('left'));
-filterBtn.addEventListener('click', () => subWindowInstance.slideMenu(sideMenu, 'open'));
+filterBtn.addEventListener('click', () => subWindowInstance.openfiltertab());
 perfilBtn.addEventListener('click', () => subWindowInstance.openPerfilSubpage());
-
-// Add a click event listener to the side-menu to close it
-sideMenu.addEventListener('click', () => subWindowInstance.closeMenu(sideMenu));
