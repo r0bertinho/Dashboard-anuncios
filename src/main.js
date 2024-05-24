@@ -22,18 +22,18 @@ class Operation {
 }
 
 class SubWindow {
-  private isOpen;
+  #isOpen;
 
   constructor() {
-    this.isOpen = false;
+    this.#isOpen = false;
   }
 
   openfiltertab() {
     const sideMenu = document.querySelector('.side-menu');
-    this.isOpen = !this.isOpen;
-    sideMenu.style.display = this.isOpen ? 'block' : 'none';
+    this.#isOpen = !this.#isOpen;
+    sideMenu.style.display = this.#isOpen ? 'block' : 'none';
 
-    if (this.isOpen) {
+    if (this.#isOpen) {
       sideMenu.style.width = '0%';
       setTimeout(() => {
         sideMenu.style.transition = 'width 0.5s';
