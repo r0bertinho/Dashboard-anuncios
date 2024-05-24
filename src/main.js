@@ -1,3 +1,4 @@
+// Classes
 class Operation {
   constructor() {
     // implementation
@@ -21,29 +22,29 @@ class Operation {
 }
 
 class SubWindow {
+  private isOpen;
+
   constructor() {
-    // implementation
+    this.isOpen = false;
   }
 
   openfiltertab() {
     const sideMenu = document.querySelector('.side-menu');
-    sideMenu.style.display = sideMenu.style.display === 'block'? 'none' : 'block';
+    this.isOpen = !this.isOpen;
+    sideMenu.style.display = this.isOpen ? 'block' : 'none';
 
-    if (sideMenu.style.display === 'block') {
+    if (this.isOpen) {
       sideMenu.style.width = '0%';
       setTimeout(() => {
         sideMenu.style.transition = 'width 0.5s';
         sideMenu.style.width = '25%';
       }, 10);
-    } else if (sideMenu.style.display === 'none') {
+    } else {
       sideMenu.style.transition = 'width 0.5s';
       sideMenu.style.width = '0%';
       setTimeout(() => {
         sideMenu.style.display = 'none';
-        }, 500);
-    } else {
-      sideMenu.style.transition = 'width 0.5s';
-      sideMenu.style.width = '0%';
+      }, 500);
     }
   }
 
@@ -53,9 +54,7 @@ class SubWindow {
   }
 }
 
-const operationInstance = new Operation();
-const subWindowInstance = new SubWindow();
-
+// DOM elements
 const searchInput = document.getElementById('search-input');
 const searchBtn = document.getElementById('search-btn');
 const filterBtn = document.getElementById('filter-btn');
@@ -65,7 +64,11 @@ const leftBtn = document.getElementById('left-btn');
 const rightBtn = document.getElementById('right-btn');
 const perfilBtn = document.getElementById('perfil-image');
 
-searchBtn.addEventListener('click', () => operationInstance.search());
+// Event listeners
+const operationInstance = new Operation();
+const subWindowInstance = new SubWindow();
+
+searchBtn.addEventListener('click', () => operationInstance.search(searchInput.textContent));
 rightBtn.addEventListener('click', () => operationInstance.passslide('right'));
 leftBtn.addEventListener('click', () => operationInstance.passslide('left'));
 filterBtn.addEventListener('click', () => subWindowInstance.openfiltertab());
