@@ -108,6 +108,7 @@ html, body {
 }
 .side-menu {
   position: fixed;
+  transition: width 0.5s;
   top: 0;
   left: 0;
   width: 25%;
@@ -118,6 +119,7 @@ html, body {
 }
 .subpage-perfil {
   position: fixed;
+  transition: display 0.5s;
   top: 0;
   left: 0;
   width: 100%;
