@@ -46,6 +46,8 @@ html, body {
   font-style: italic;
 }
 .icons #perfil-btn {
+  min-width: fit-content;
+  min-height: fit-content;
   padding: 0px;
   margin: 0px;
   border-radius: 50%;
@@ -57,6 +59,8 @@ html, body {
   outline-style: dashed;
 }
 .icons #perfil-image {
+  min-width: fit-content;
+  min-height: fit-content;
   border-radius: 50%;
   object-fit: cover;
 }
