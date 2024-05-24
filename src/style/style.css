@@ -50,6 +50,7 @@ html, body {
   min-height: fit-content;
   padding: 0px;
   margin: 0px;
+  margin-left: 16px;
   border-radius: 50%;
   outline: solid;
   outline-color: #921313;
@@ -59,8 +60,8 @@ html, body {
   outline-style: dashed;
 }
 .icons #perfil-image {
-  min-width: fit-content;
-  min-height: fit-content;
+  max-width: 32px;
+  max-height: 32px;
   border-radius: 50%;
   object-fit: cover;
 }
