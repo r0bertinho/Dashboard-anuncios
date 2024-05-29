@@ -1,6 +1,6 @@
-import {LoginOperation} from 'js/login.js';
-import {SubWindow} from 'js/subwin.js';
-import {SearchOperations} from 'js/search.js';
+import { LoginOperation } from './login.js';
+import { SearchOperations } from './search.js';
+import { SubWindow } from './subwin.js';
 
 class ElementID {
   constructor() {
@@ -12,13 +12,23 @@ class ElementID {
     let leftBtn = document.getElementById('left-btn');
     let rightBtn = document.getElementById('right-btn');
     let perfilBtn = document.getElementById('perfil-btn');
+    this.searchInput = searchInput;
+    this.searchBtn = searchBtn;
+    this.filterBtn = filterBtn;
+    this.base = base;
+    this.prodList = prodList;
+    this.leftBtn = leftBtn;
+    this.rightBtn = rightBtn;
+    this.perfilBtn = perfilBtn;
   }
 }
 
-let ElementID = new ElementID();
+let elementID = new ElementID();
+let searchOperations = new SearchOperations();
+let subWindow = new SubWindow();
 
-ElementID.searchBtn.addEventListener('click', () => SearchOperations.search(searchInput.textContent));
-ElementID.rightBtn.addEventListener('click', () => SearchOperations.passslide('right'));
-ElementID.leftBtn.addEventListener('click', () => SearchOperations.passslide('left'));
-ElementID.filterBtn.addEventListener('click', () => SubWindow.openfiltertab());
-ElementID.perfilBtn.addEventListener('click', () => SubWindow.openPerfilSubpage());
+elementID.searchBtn.addEventListener('click', () => searchOperations.search(elementID.searchInput.value));
+elementID.rightBtn.addEventListener('click', () => searchOperations.passslide('right'));
+elementID.leftBtn.addEventListener('click', () => searchOperations.passslide('left'));
+elementID.filterBtn.addEventListener('click', () => subWindow.openfiltertab());
+elementID.perfilBtn.addEventListener('click', () => subWindow.openPerfilSubpage());

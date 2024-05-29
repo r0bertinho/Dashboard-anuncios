@@ -1,4 +1,4 @@
-class SubWindow {
+export class SubWindow {
   #isOpen;
   
   constructor() {
@@ -7,8 +7,8 @@ class SubWindow {
   
   openfiltertab() {
     const sideMenu = document.querySelector('.side-menu');
-    this.#isOpen = !this.#isOpen;
-    sideMenu.style.display = this.#isOpen ? 'block' : 'none';
+    this.#isOpen =!this.#isOpen;
+    sideMenu.style.display = this.#isOpen? 'block' : 'none';
   
     if (this.#isOpen) {
     sideMenu.style.width = '0%';
@@ -26,5 +26,3 @@ class SubWindow {
     subpage.style.display = 'block';
   }
 }
-
-let SubWindow = new SubWindow();

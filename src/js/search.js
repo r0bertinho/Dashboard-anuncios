@@ -1,4 +1,4 @@
-class SearchOperations {
+export class SearchOperations {
   constructor() {
     // implementation
   }
@@ -19,5 +19,3 @@ class SearchOperations {
     // implementation
   }
 }
-
-let SearchOperations = new SearchOperations();

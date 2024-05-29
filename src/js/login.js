@@ -1,4 +1,4 @@
-class LoginOperation {
+export class LoginOperation {
   constructor() {
     
   }
@@ -11,5 +11,3 @@ class LoginOperation {
 
   }
 }
-
-let LoginOperation = new LoginOperation();
