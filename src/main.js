@@ -1,75 +1,24 @@
-// Classes
-class Operation {
+import {LoginOperation} from 'js/login.js';
+import {SubWindow} from 'js/subwin.js';
+import {SearchOperations} from 'js/search.js';
+
+class ElementID {
   constructor() {
-    // implementation
-  }
-
-  search(query) {
-    // implementation
-  }
-
-  filterElements(filterTag) {
-    // implementation
-  }
-
-  passslide(direction) {
-    // implementation
-  }
-
-  createByTemplate(tmplt) {
-    // implementation
+    let searchInput = document.getElementById('search-input');
+    let searchBtn = document.getElementById('search-btn');
+    let filterBtn = document.getElementById('filter-btn');
+    let base = document.getElementById("prod-template");
+    let prodList = document.getElementsByClassName("prodtable");
+    let leftBtn = document.getElementById('left-btn');
+    let rightBtn = document.getElementById('right-btn');
+    let perfilBtn = document.getElementById('perfil-btn');
   }
 }
 
-class SubWindow {
-  #isOpen;
+let ElementID = new ElementID();
 
-  constructor() {
-    this.#isOpen = false;
-  }
-
-  openfiltertab() {
-    const sideMenu = document.querySelector('.side-menu');
-    this.#isOpen = !this.#isOpen;
-    sideMenu.style.display = this.#isOpen ? 'block' : 'none';
-
-    if (this.#isOpen) {
-      sideMenu.style.width = '0%';
-      setTimeout(() => {
-        sideMenu.style.transition = 'width 0.5s';
-        sideMenu.style.width = '25%';
-      }, 10);
-    } else {
-      sideMenu.style.transition = 'width 0.5s';
-      sideMenu.style.width = '0%';
-      setTimeout(() => {
-        sideMenu.style.display = 'none';
-      }, 500);
-    }
-  }
-
-  openPerfilSubpage() {
-    const subpage = document.querySelector('.subpage-perfil');
-    subpage.style.display = 'block';
-  }
-}
-
-// DOM elements
-const searchInput = document.getElementById('search-input');
-const searchBtn = document.getElementById('search-btn');
-const filterBtn = document.getElementById('filter-btn');
-const base = document.getElementById("prod-template");
-const prodList = document.getElementsByClassName("prodtable");
-const leftBtn = document.getElementById('left-btn');
-const rightBtn = document.getElementById('right-btn');
-const perfilBtn = document.getElementById('perfil-btn');
-
-// Event listeners
-const operationInstance = new Operation();
-const subWindowInstance = new SubWindow();
-
-searchBtn.addEventListener('click', () => operationInstance.search(searchInput.textContent));
-rightBtn.addEventListener('click', () => operationInstance.passslide('right'));
-leftBtn.addEventListener('click', () => operationInstance.passslide('left'));
-filterBtn.addEventListener('click', () => subWindowInstance.openfiltertab());
-perfilBtn.addEventListener('click', () => subWindowInstance.openPerfilSubpage());
+ElementID.searchBtn.addEventListener('click', () => SearchOperations.search(searchInput.textContent));
+ElementID.rightBtn.addEventListener('click', () => SearchOperations.passslide('right'));
+ElementID.leftBtn.addEventListener('click', () => SearchOperations.passslide('left'));
+ElementID.filterBtn.addEventListener('click', () => SubWindow.openfiltertab());
+ElementID.perfilBtn.addEventListener('click', () => SubWindow.openPerfilSubpage());
