@@ -25,7 +25,41 @@ class SubWindow {
   }
 }
 
-// ...
+class SearchOperations {
+  constructor() {
+    // implementation
+  }
+
+  search(query) {
+    // implementation
+  }
+
+  filterElements(filterTag) {
+    // implementation
+  }
+
+  passslide(direction) {
+    // implementation
+  }
+
+  createByTemplate(tmplt) {
+    // implementation
+  }
+}
+
+class NetOperations {
+  constructor() {
+
+  }
+
+  SendSignal() {
+
+  }
+
+  GetSignal() {
+
+  }
+}
 
 document.addEventListener('DOMContentLoaded', () => {
   const searchInput = document.getElementById('search-input');
