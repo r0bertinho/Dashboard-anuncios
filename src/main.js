@@ -6,19 +6,31 @@ class SubWindow {
   }
 
   openfiltertab(sideMenu) {
-    this.#isOpen = !this.#isOpen;
-    sideMenu.style.display = this.#isOpen ? 'block' : 'none';
+  this.#isOpen =!this.#isOpen;
+  sideMenu.style.display = this.#isOpen? 'block' : 'none';
 
-    if (this.#isOpen) {
-      sideMenu.style.width = '0%';
+  if (this.#isOpen) {
+    sideMenu.style.width = '0%';
+    sideMenu.style.overflow = 'hidden'; // add this to hide the content during animation
+    setTimeout(() => {
+      sideMenu.style.transition = 'width 0.5s';
+      sideMenu.style.width = '25%';
       setTimeout(() => {
-        sideMenu.style.transition = 'width 0.5s';
-        sideMenu.style.width = '25%';
-      }, 10);
-    } else {
-
-    }
+        sideMenu.style.overflow = 'visible'; // show the content after animation
+      }, 500); // adjust the timeout to match the animation duration
+    }, 10);
+  } else {
+    sideMenu.style.width = '25%';
+    sideMenu.style.transition = 'width 0.5s';
+    setTimeout(() => {
+      sideMenu.style.width = '0%';
+      sideMenu.style.overflow = 'hidden'; // hide the content during animation
+      setTimeout(() => {
+        sideMenu.style.display = 'none';
+      }, 500); // adjust the timeout to match the animation duration
+    }, 10);
   }
+}
 
   openPerfilSubpage(subpage) {
     subpage.style.display = 'block';
