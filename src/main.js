@@ -1,20 +1,27 @@
+import { AfterViewInit, ElementRef } from '@angular/core';
+
 class SubWindow {
   #isOpen;
 
-  constructor() {
+  constructor(private elementRef: ElementRef) {
     this.#isOpen = false;
   }
 
+  ngAfterViewInit() {
+    // Initialize the side menu and subpage elements
+    this.sideMenu = this.elementRef.nativeElement.querySelector('.side-menu');
+    this.subpagePerfil = this.elementRef.nativeElement.querySelector('.subpage-perfil');
+  }
+
   openfiltertab() {
-    const sideMenu = document.querySelector('.side-menu');
-    this.#isOpen = !this.#isOpen;
-    sideMenu.style.display = this.#isOpen ? 'block' : 'none';
+    this.#isOpen =!this.#isOpen;
+    this.sideMenu.style.display = this.#isOpen? 'block' : 'none';
 
     if (this.#isOpen) {
-      sideMenu.style.width = '0%';
+      this.sideMenu.style.width = '0%';
       setTimeout(() => {
-        sideMenu.style.transition = 'width 0.5s';
-        sideMenu.style.width = '25%';
+        this.sideMenu.style.transition = 'width 0.5s';
+        this.sideMenu.style.width = '25%';
       }, 10);
     } else {
 
@@ -22,62 +29,43 @@ class SubWindow {
   }
 
   openPerfilSubpage() {
-    const subpage = document.querySelector('.subpage-perfil');
-    subpage.style.display = 'block';
+    this.subpagePerfil.style.display = 'block';
   }
 }
 
 class SearchOperations {
-  constructor() {
-    // implementation
-  }
-
-  search(query) {
-    // implementation
-  }
-
-  filterElements(filterTag) {
-    // implementation
-  }
-
-  passslide(direction) {
-    // implementation
-  }
-
-  createByTemplate(tmplt) {
-    // implementation
-  }
+  // implementation
 }
 
 class NetOperations {
-  constructor() {
-
-  }
-
-  SendSignal() {
-
-  }
-
-  GetSignal() {
-
-  }
+  // implementation
 }
 
-const searchInput = document.getElementById('search-input');
-const searchBtn = document.getElementById('search-btn');
-const filterBtn = document.getElementById('filter-btn');
-const base = document.getElementById("prod-template");
-const prodList = document.getElementsByClassName("prodtable");
-const leftBtn = document.getElementById('left-btn');
-const rightBtn = document.getElementById('right-btn');
-const perfilBtn = document.getElementById('perfil-btn');
+@Component({
+  selector: 'app-root',
+  template: '<!-- your template here -->'
+})
+export class AppComponent implements AfterViewInit {
+  constructor(private elementRef: ElementRef) { }
 
-let searchOperations = new SearchOperations();
-let NetOperations = new NetOperations();
-let subWindow = new SubWindow();
+  ngAfterViewInit() {
+    const searchInput = this.elementRef.nativeElement.querySelector('#search-input');
+    const searchBtn = this.elementRef.nativeElement.querySelector('#search-btn');
+    const filterBtn = this.elementRef.nativeElement.querySelector('#filter-btn');
+    const base = this.elementRef.nativeElement.querySelector("#prod-template");
+    const prodList = this.elementRef.nativeElement.querySelectorAll(".prodtable");
+    const leftBtn = this.elementRef.nativeElement.querySelector('#left-btn');
+    const rightBtn = this.elementRef.nativeElement.querySelector('#right-btn');
+    const perfilBtn = this.elementRef.nativeElement.querySelector('#perfil-btn');
 
-searchBtn.addEventListener('click', () => searchOperations.search(searchInput.value));
-rightBtn.addEventListener('click', () => searchOperations.passslide('right'));
-leftBtn.addEventListener('click', () => searchOperations.passslide('left'));
-filterBtn.addEventListener('click', () => subWindow.openfiltertab());
-perfilBtn.addEventListener('click', () => subWindow.openPerfilSubpage());
+    let searchOperations = new SearchOperations();
+    let netOperations = new NetOperations();
+    let subWindow = new SubWindow(this.elementRef);
+
+    searchBtn.addEventListener('click', () => searchOperations.search(searchInput.value));
+    rightBtn.addEventListener('click', () => searchOperations.passslide('right'));
+    leftBtn.addEventListener('click', () => searchOperations.passslide('left'));
+    filterBtn.addEventListener('click', () => subWindow.openfiltertab());
+    perfilBtn.addEventListener('click', () => subWindow.openPerfilSubpage());
+  }
+}
