@@ -1,18 +1,22 @@
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   height: 100%;
 }
+
 .header {
   background-color: #3D0814;
   padding: 16px;
   display: flex;
 }
+
 .header #logo {
   object-fit: cover;
   width: 23px;
   padding-right: 16px;
 }
+
 .header button {
   border: none;
   color: black;
@@ -24,6 +28,7 @@ html, body {
   border-bottom-right-radius: 16px;
   margin-left: -4px;
 }
+
 .header input {
   border: none;
   text-indent: 8px;
@@ -32,9 +37,11 @@ html, body {
   border-top-left-radius: 16px;
   border-bottom-left-radius: 16px;
 }
+
 .icons {
   margin-left: auto;
 }
+
 .icons #filter-btn {
   color: #921313;
   background: none;
@@ -42,9 +49,11 @@ html, body {
   margin-left: 0px;
   font-size: 16px;
 }
+
 .icons #filter-btn:hover {
   font-style: italic;
 }
+
 .icons #perfil-btn {
   min-width: fit-content;
   min-height: fit-content;
@@ -56,15 +65,18 @@ html, body {
   outline-color: #921313;
   outline-style: dotted;
 }
+
 .icons #perfil-btn:hover {
   outline-style: dashed;
 }
+
 .icons #perfil-image {
   max-width: 32px;
   max-height: 32px;
   border-radius: 50%;
   object-fit: cover;
 }
+
 .slideshow {
   display: flex;
   justify-content: center;
@@ -72,12 +84,14 @@ html, body {
   padding: 32px;
   background-color: #921313;
 }
+
 .slideshow #slideimg {
   object-fit: cover;
   border-radius: 10px;
   width: 75%;
   height: 400px;
 }
+
 .slideshow button {
   background: none;
   border: none;
@@ -85,12 +99,15 @@ html, body {
   width: 5%;
   height: 64px;
 }
+
 .slideshow #left-btn {
   margin-right: -16px;
 }
+
 .slideshow #right-btn {
   margin-left: -16px;
 }
+
 .prodtable {
   min-height: 800px;
   height: auto !important;
@@ -105,34 +122,40 @@ html, body {
   padding: 16px;
   background-color: #f1f1f1;
 }
+
 .prod-bubble {
   margin: 2%;
   padding: 32px;
   border-radius: 16px;
   background-color: #921313;
 }
+
 .prod-bubble a #prod-img {
   border-radius: 16px;
   width: 128px;
 }
+
 .prod-bubble a #prod-name {
   font-size: 24px;
   color: #363636;
   font-family: 'Lucida Sans';
   font-style: normal;
 }
+
 .prod-bubble #description {
   font-size: 16px;
   color: #000000;
   font-family: 'Segoe UI';
   font-style: normal;
 }
+
 .prod-bubble #price {
   font-size: 18px;
   color: #000000;
   font-family: 'Franklin Gothic Medium';
   font-style: italic;
 }
+
 .side-menu {
   position: fixed;
   top: 0;
@@ -143,6 +166,7 @@ html, body {
   padding: 16px;
   display: none;
 }
+
 .subpage-perfil {
   position: fixed;
   top: 0;
