@@ -1,6 +1,6 @@
-import { LoginOperation } from './login.js';
-import { SearchOperations } from './search.js';
-import { SubWindow } from './subwin.js';
+import { LoginOperation } from './js/login.js';
+import { SearchOperations } from './js/search.js';
+import { SubWindow } from './js/subwin.js';
 
 class ElementID {
   constructor() {
