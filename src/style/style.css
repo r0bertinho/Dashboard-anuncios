@@ -20,8 +20,8 @@ body {
 .header button {
   border: none;
   color: black;
-  background-color: #921313;
-  outline-color: #921313;
+  background-color: #4bd4d4;
+  outline-color: #4bd4d4;
   min-width: 80px;
   min-height: 24px;
   border-top-right-radius: 16px;
@@ -43,7 +43,7 @@ body {
 }
 
 .icons #filter-btn {
-  color: #921313;
+  color: #4bd4d4;
   background: none;
   border: none;
   margin-left: 0px;
@@ -62,7 +62,7 @@ body {
   margin-left: 16px;
   border-radius: 50%;
   outline: solid;
-  outline-color: #921313;
+  outline-color: #4bd4d4;
   outline-style: dotted;
 }
 
@@ -82,7 +82,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: 32px;
-  background-color: #4bd4d4;
+  background-color: #e6447d;
 }
 
 .slideshow #slideimg {
