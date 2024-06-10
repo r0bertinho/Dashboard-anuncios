@@ -1,7 +1,11 @@
 {
+  "name": "dashboard",
   "version": 2,
   "cleanUrls": true,
   "framework": "angular",
+  "github": {
+    "silent": true
+  },
   "builds": [
     {
       "src": "client/package.json",
@@ -10,5 +14,8 @@
         "distDir": "."
       }
     }
+  ],
+  "routes": [
+    { "src": "/client/source/(.*)", "dest": "/client/dist/$1" }
   ]
 }
