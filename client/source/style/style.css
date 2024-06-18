@@ -17,6 +17,13 @@ body {
   padding-right: 16px;
 }
 
+.header #logobtn {
+  background: transparent;
+  outline: none;
+  width: fit-content;
+  height: fit-content;
+}
+
 .header button {
   border: none;
   color: black;
